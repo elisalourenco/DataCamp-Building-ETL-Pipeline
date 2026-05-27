@@ -59,10 +59,10 @@ def load(dataframe: pd.DataFrame, file_path: str):
 
 
 # Ready for the moment of truth? It's time to test the functions that you wrote!
-raw_electricity_capability_df = extract_json_data("Building ETL Pipeline/Data/electricity_capability_nested.json")
-raw_electricity_sales_df = extract_tabular_data("Building ETL Pipeline/Data/electricity_sales.csv")
+raw_electricity_capability_df = extract_json_data("Building ETL Pipeline/data/electricity_capability_nested.json")
+raw_electricity_sales_df = extract_tabular_data("Building ETL Pipeline/data/electricity_sales.csv")
 
 cleaned_electricity_sales_df = transform_electricity_sales_data(raw_electricity_sales_df)
 
-load(raw_electricity_capability_df, "Building ETL Pipeline/Data/loaded__electricity_capability.parquet")
-load(cleaned_electricity_sales_df, "Building ETL Pipeline/Data/loaded__electricity_sales.csv")
+load(raw_electricity_capability_df, "Building ETL Pipeline/data/loaded__electricity_capability.parquet")
+load(cleaned_electricity_sales_df, "Building ETL Pipeline/data/loaded__electricity_sales.csv")
